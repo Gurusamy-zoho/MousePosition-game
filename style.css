@@ -1,0 +1,114 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+
+  body {
+    height: 100vh;
+    background: linear-gradient(135deg, #3e206d, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #MainContainer {
+    background: rgba(255, 255, 255, 0.1); 
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 320px;
+  }
+  
+  #MainContainer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  }
+  
+  h2 {
+    color: #ffffff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #d0d0d0;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #ff4081;
+  }
+  
+  #btn {
+    background: linear-gradient(90deg, #ff6b6b, #ff4081);
+    color: #ffffff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 0 6px 14px rgba(255, 64, 129, 0.4);
+  }
+  
+
+  #note {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    width: 340px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  #note h2 {
+    color: #ff4081;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  #note p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  #note:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    #MainContainer, #note {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
+  
+    #btn {
+      font-size: 0.9rem;
+    }
+  }
+  
