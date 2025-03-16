@@ -4,72 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse Event</title>
-    <style>
-
-        *{
-            cursor: pointer;
-         }
-         
-         body {
-            background: rgb(12,72,138);
-            background: linear-gradient(90deg, rgba(12,72,138,1) 35%, rgba(38,118,172,1) 71%, rgba(99,187,235,1) 91%); 
-         }
-
-         #MainContainer{
-            width: 300px;
-            height: 200px;
-            background-color: whitesmoke;
-            border: 1px solid gray;
-            margin: 15vh auto 0 auto;
-            border-radius: 5px;
-            padding: 10px;
-         }
-
-         #btn{
-            color: white;
-            background-color: rgb(27, 115, 214);
-            width: 50%;
-            font-family:sans-serif;
-            font-size: 13px;
-            margin-left: 70px;
-            margin-top:30px;
-            height: 30px;
-            border-radius: 5px;
-            
-         }
-
-         .sample{
-            background-color: whitesmoke;
-         }
-
-
-         #note {
-            width:50%;
-            background-color: whitesmoke;
-            border: 1px solid gray;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 30px auto 0 auto;
-            margin-top: 100px;
-         }
-
-         #note h2 {
-            font-size: 18px;
-            color: rgb(1, 9, 18);
-         }
-
-         #note p {
-            font-size: 14px;
-            color: black;
-         }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
     <div id="MainContainer" class="sample">
-        <h2>Go to correct position:</h2>
+        <h2>🎯 Find position:</h2>
         <p class="sample">
             X : <span id="ValueofX"></span>
         </p>
@@ -88,34 +29,7 @@
         <p>Good luck! 🍀</p>
    </div>
 
-    <script>
-        let findValX = Math.floor(Math.random() * 1422);
-        let findValY = Math.floor(Math.random() * 673);
-
-        alert(`Find this position: X : ${findValX}, Y: ${findValY}`);
-
-        let x = 0;
-        let y = 0;
-
-        window.addEventListener('mousemove', function(e) {
-            x = e.x;
-            y = e.y;
-            document.getElementById('ValueofX').textContent = x;
-            document.getElementById('ValueofY').textContent = y;
-        });
-
-        document.addEventListener('keydown', (event) => {
-            if (event.key === 'Enter') {
-                if (findValX === x && findValY === y) {
-                   return alert("You successfully found it. 🥳🎉");
-
-                 
-                } else {
-                    alert("Wrong position ❌");
-                }
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
 
